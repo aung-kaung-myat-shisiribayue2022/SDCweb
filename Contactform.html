@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standing Desk Company</title>
+    <link rel="icon" type="image/x-icon" href="img/SDClogo.jpg">
+    <link rel="stylesheet" href="contactus.css">
+    <script src="https://kit.fontawesome.com/e8b1f7cb33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="navigation">
+    <div class="logo">
+      <a href="web-heading.html"><img src="img/SDClogo.jpg" alt="SDC Logo" class="logoimg"></a>
+    </div>
+    <div class="nav">
+      <div class="navbar">
+        <ul>
+          <li><a href="web-heading.html">Home</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Rising Desks</a>
+            <div class="dropdown-content">
+              <a href="erdmain.html">Electric Rising Desks</a>
+              <a href="ms.html">Monitor</a>
+              <a href="ec.html">Ergonomic Chairs</a>
+            </div>
+          </li>
+          <li><a href="Contactform.html">Contact us</a></li>
+          <li><a href="hbmain.html">Health Benefits</a></li>
+        </ul>
+      </div>
+      <div class="navr">
+        <ul>
+          <li><a href="aboutus.html">About us</a></li>
+          <li class="shoppingcart">
+            <a href="Checkout.html"><i class="fa-solid fa-basket-shopping"></i><span id="cart-count"></span></a>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" id="log12"><i id="log11" class="fa fa-sign-in" aria-hidden="true"></i></a>
+            <div class="dropdown-content">
+              <a href="">Sign in</a>
+              <a href="">Log in</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cartCount = document.getElementById('cart-count');
+      let itemCount = parseInt(sessionStorage.getItem('cartItemCount')) || 0;
+      function updateCartCount() {
+        cartCount.textContent = itemCount;
+        sessionStorage.setItem('cartItemCount', itemCount);
+      }
+      updateCartCount();
+    });
+  </script>
+
+  <div class="container">
+    <form id="myForm" action="submit_form.php" method="post">
+      <div class="row">
+        <div class="col-25">
+          <label for="firstNameInput">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="firstNameInput" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lastNameInput">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lastNameInput" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="emailInput">E-mail address</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="emailInput" name="email" placeholder="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="commentInput">Comment</label>
+        </div>
+        <div class="col-75">
+          <textarea id="commentInput" name="subject" placeholder="Write something....."></textarea>
+        </div>
+      </div>
+      <br><br>
+      <div class="ib">
+        <div class="row">
+          <button type="button" class="button" onclick="submitForm()">Submit</button>
+        </div>
+        <br><br>
+        <div class="row">
+          <button type="button" onclick="clearInputs()" class="button2">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="sm">
+      <h1 class="teh1">You can follow us</h1>
+      <div class="fb">
+        <i class="fa-brands fa-facebook"></i>
+        <a href="https://www.facebook.com/" class="socialmedialink1">Facebook</a>
+      </div>
+      <div class="g">
+        <i class="fa-brands fa-google"></i>
+        <a href="https://mail.google.com/mail/u/0/" class="socialmedialink1">Google</a>
+      </div>
+      <div class="x">
+        <i class="fa-solid fa-x"></i>
+        <a href="https://twitter.com/?lang=en" class="socialmedialink1">Twitter (X)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div class="more">
+      <h1 class="mh1">If you want to negotiate about price and massive purchase the products. You can book the meeting with us by clicking the below button.</h1>
+      <div class="row">
+        <a href="thank.html" class="button3">Click</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="resizemap">
+    <div class="maploc">
+      <h1 class="l1">Our Business location</h1>
+      <br><br>
+      <p class="lp1">Our business is located in PG9F+55G, Science Building, Casey Station, Antarctica</p>
+      <p class="lp1">Our phone number is +1-528-751-951</p>
+      <p class="lp1">Our fax number is +85-485-963-212</p>
+      <p class="lp1">Latitude 16°48'16.0"N Longitude 96°08'22.5"E</p>
+    </div>
+    <div id="googleMap"></div>
+  </div>
+
+  <script>
+    function myMap() {
+      var yangon = new google.maps.LatLng(16.804444, 96.139583);
+      var mapOptions = {
+        center: yangon,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.hybrid,
+        mapTypeControlOptions: {
+          mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain']
+        }
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+      var marker = new google.maps.Marker({
+        position: yangon,
+        map: map,
+        icon: 'https://maps.google.com/mapfiles/kml/paddle/pink-circle.png',
+        title: "Yangon"
+      });
+      var myCity = new google.maps.Circle({
+        center: yangon,
+        radius: 400,
+        strokeColor: "#0000FF",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#0000FF",
+        fillOpacity: 0.4,
+        map: map
+      });
+      map.setOptions({styles: [{featureType: 'poi', elementType: 'labels', stylers: [{visibility: 'on'}]}]});
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLtsVBMY9Xkfe4tCWt8iqlen5fAZc7crA&callback=myMap"></script>
+
+  <div class="acc">
+    <h1> Questions and Answers</h1>
+    <button class="accordion">Q: How does using a standing desk benefit my health?</button>
+    <div class="panel">
+      <p>A: Standing desks can help improve posture, reduce back pain, boost energy levels, and decrease the risk of certain health issues associated with prolonged sitting, such as obesity, heart disease, and type 2 diabetes.</p>
+    </div>
+    <button class="accordion">Q: Are standing desks suitable for everyone?</button>
+    <div class="panel">
+      <p>A: Standing desks may not be suitable for everyone, particularly those with mobility issues or certain health conditions. It's essential to consider individual needs and abilities when choosing a workstation setup.</p>
+    </div>
+    <button class="accordion">Q: Are there any studies supporting the health benefits of standing desks?</button>
+    <div class="panel">
+      <p>A: Yes, numerous studies have shown the potential health benefits of standing desks, including improved posture, reduced risk of chronic diseases, and increased energy expenditure. However, individual results may vary, and it's essential to incorporate other healthy habits into your routine as well.</p>
+    </div>
+  </div>
+
+<div class="footer">
+  <div class="sloc">
+    <h1 class="sloc2">Store Information</h1>
+    <p>Our store is located in the very center of city at PG9F+55G, Science Building, Casey Station, Antarctica.</p>
+    <p>And our e-commerce website is always open and has 24/7 service for customers.</p>
+    <p>Our store opening hours are 10am to 5.30pm, Monday to Saturday.</p>
+    <p>Our phone number is +1-528-751-951</p>
+    <p>Our fax number is +85-485-963-212</p>
+    <p>For more detailed information or anything at all, don't hesitate, any time please <a href="Contactform.html" class="c"><h3>Contact us</h3></a></p>
+  </div>
+  <div class="subscribe">
+    <h1>Promotion and News</h1>
+    <p>If you want to keep in touch about our promotion events, discount prices, and news, we always send emails to you.</p>
+    <input type="email" name="Your email address" placeholder="email" id="myInput"><br>
+    <a href="https://mail.google.com/mail/u/0/" class="button4">Submit</a>
+  </div>
+  <br><br>
+   <h2>@SDC2024</h2>
+  <div class="bf">
+   
+    <a href="https://www.facebook.com/" class="socialmedialink"><i class="fab fa-facebook"></i> Facebook</a><br>
+    <a href="https://mail.google.com/mail/u/0/" class="socialmedialink"><i class="fab fa-google"></i> Google</a><br>
+    <a href="https://twitter.com/?lang=en" class="socialmedialink"><i class="fab fa-twitter"></i> Twitter (X)</a>
+  </div>
+</div>
+  <script src="contactus.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standing Desk Company</title>
+    <link rel="stylesheet" href="wh.css">
+    <link rel="icon" type="image/x-icon" href="img/SDClogo.jpg">
+    <script src="https://kit.fontawesome.com/e8b1f7cb33.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="navigation">
+  <div class="logo">
+    <a href="web-heading.html"> <img src="img/SDClogo.jpg" alt="" class="logoimg"></a>
+ 
+ <div class="nav">
+  <div class="navbar">
+   
+    <ul>
+        <li><a href="web-heading.html">Home</a></li> 
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Rising Desks</a>
+          <div class="dropdown-content">
+           <a href="erdmain.html">Electric Rising Desks</a>
+           <a href="ms.html">Monitor </a>
+           <a href="ec.html">Ergonomic Chairs</a>
+
+           </div>
+           </li>
+        <li > <a href="Contactform.html">Contact us </a> </li>
+        <li><a href="hbmain.html">Health Benefits</a></li> </ul>
+    
+</div>
+
+<div class="navr">
+  <ul>
+   <li><a href="aboutus.html">About us</a></li> 
+ 
+   <li class="shoppingcart">
+    <a href="Checkout.html"><i class="fa-solid fa-basket-shopping"></i>
+    <span id="cart-count"></span> </a>
+  </li>
+          
+      <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cartCountElement = document.getElementById('cart-count');
+    
+   
+    let cartCount = parseInt(sessionStorage.getItem('cartItemCount')) || 0;
+    
+    
+    function updateCartCount() {
+      cartCountElement.textContent = cartCount;
+      sessionStorage.setItem('cartItemCount', cartCount);
+    }
+
+  
+    updateCartCount();
+  });
+</script>
+   <li class="dropdown"><a href="javascript:void(0)" class="dropbtn" id="log12" ><i id="log11" class="fa fa-sign-in" aria-hidden="true"></i></a>
+   <div class="dropdown-content">
+    <a href="">Sign in</a>
+    <a href="">Log in</a>
+    </div>
+    </li> </ul>
+ 
+ </div>
+ </div>
+ 
+ </div> <br> <br>
+
+   
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p class="modeltext">Hello! Welcome to our website.Our wish your get good lucky days.Thanks for visting our website.</p>
+      </div>
+  </div>
+
+  
+  <button onclick="openModal()" class="bu">Open Modal</button>
+  
+  <div class="search">
+    <form action="submit.php">
+     <input class="sea" type="text" placeholder="search"><i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+    </div> <br> <br> 
+  
+<div class="slideshow-container">
+
+  
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="img/r4.jpg" alt="pic" class="slidepic">
+      <div class="text">Marsail Standing Desk Adjustable Height,48x24 Inch Electric Standing Desk, Stand up Desk with Storage Bag,Headphone Hook for Computer Workstations Desk Memory Preset</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="img/r5.jpg" alt="pic" class="slidepic">
+      <div class="text">JOY worker Height Adjustable Electric Standing Desk with Storage Shelves, 48 Inch Table with Built-in Monitor Stand, Sit Stand Desk with 2 Hooks for Home Office, White</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="img/r6.jpg" alt="pic" class="slidepic">
+      <div class="text">Claiks Glass Standing Desk, Electric Standing Desk Adjustable Height, 48 Inch Adjustable Stand Up Desk, Quick Install Home Office Computer Desk, Supter White</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4/ 5</div>
+        <img src="img/r7.jpg" alt="pic" class="slidepic">
+        <div class="text">TechOrbits Standing Desk Converter - 32 Inch Adjustable Sit to Stand Up Desk Workstation, Particle Board, Dual Monitor Desk Riser with Keyboard Tray, Desktop Riser for Home Office Laptop, Black 32"</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5/ 5</div>
+        <img src="img/r8.jpg" alt="pic" class="slidepic">
+        <div class="text">OUTFINE Heavy Duty Dual Motor Height Adjustable Standing Desk Electric Dual Motor Home Office Stand Up Computer Workstation with (Black, 63") Desktop Load up to 220lbs</div>
+      </div>
+      
+  
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+ 
+  <div class="slide">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div> <br> <br>
+
+  <div class="cb">
+  
+    <h1 class="cbtext">Why Standing Desks</h1>
+    
+    <div class="clearfix">
+      <video controls class="img2">
+        <source src="vdo/v1.mp4" type="video/mp4">
+        
+      </video>
+    
+  <h3>A standing desk, often known as a stand-up desk, is a type of desk that allows you to stand up comfortably while working.
+  
+    Many current models are adjustable, allowing you to vary the desk height and cycle between sitting and standing.
+    
+    
+    These are sometimes referred to as height-adjustable or sit-stand desks.
+    
+    Although the research is still in its early phases, it appears that using a standing workstation has significant health benefits. It may also lead to increased productivity.
+    
+    At the absolute least, employing this style of desk helps mitigate some of the negative effects of prolonged sitting.
+    
+    Here are 10 scientifically documented benefits of using a standing desk.<span id="dots">...</span><span id="more"> <br>1.Reduced Risk of Obesity: Standing burns more calories than sitting, which can help prevent weight gain or aid in weight loss. <br>
+      2.Improved Posture: Standing desks can encourage better posture by promoting a more natural alignment of the spine compared to sitting for prolonged periods. 
+       3. Reduced Risk of Cardiovascular Disease: Standing intermittently throughout the day can help lower blood sugar levels, triglycerides, and cholesterol, reducing the risk of heart disease. <br>
+         4. Increased Energy Levels: Standing can help combat feelings of lethargy and boost energy levels by improving circulation and increasing oxygen flow throughout the body. <br>
+          5.Enhanced Productivity: Some studies suggest that standing desks can improve focus, concentration, and overall productivity by reducing feelings of fatigue and increasing alertness. <br>
+            6. Alleviation of Back Pain: Standing desks may help alleviate back pain associated with prolonged sitting by engaging core muscles and promoting better spinal alignment. <br>
+              7. Reduced Risk of Chronic Diseases: Prolonged sitting has been linked to an increased risk of chronic diseases such as type 2 diabetes, certain types of cancer, and metabolic syndrome. Standing desks offer an opportunity to reduce sedentary behavior and mitigate these risks. <br>
+                 8. Improved Mood and Well-Being: Standing can stimulate the release of endorphins, neurotransmitters responsible for feelings of happiness and well-being, which can contribute to improved mood and mental health. <br>
+                  9. Increased Longevity: Some research suggests that reducing sedentary behavior, such as sitting for extended periods, may lead to a longer lifespan. <br>
+                     10. Customizable Options: Many standing desks offer adjustable height settings, allowing users to alternate between sitting and standing throughout the day, promoting movement and reducing the negative effects of either position. <br></span></h3>
+  <button onclick="myFunction()" id="myBtn">Read more</button>
+  
+      
+    </div> 
+    
+  </div> <br> <br>
+
+  <h1 class="ccont"> Our Special offers for today</h1>
+  <div class="pcardhead">
+  
+    <div class="pcard">
+      <img src="img/RDB63_28.jpg" alt="" class="cardimg">
+      <h1 class="pcardtext">ErGear Height Adjustable Electric Standing Desk</h1>
+      <p class="price1">$500</p>
+      <p class="price">$300</p>
+      <p>Sturdy & stable solid steel frame.</p>
+      <p>Aerospace-grade lifting column connectors.</p>
+      <p>Powerful lifting system tested 50,000 times.</p>
+      <button class="mybtn" onclick="addToCart()">Add to Cart</button>
+  </div>
+  <div class="pcard">
+      <img src="img/RDB0.jpg" alt="" class="cardimg">
+      <h1 class="pcardtext">EUREKA ERGONOMIC Health Benefit 60 Inch Standing Desk</h1>
+      <p class="price1">$799.99</p>
+      <p class="price">$699.99</p>
+      <p>Sturdy & stable solid steel frame.</p>
+      <p>Aerospace-grade lifting column connectors.</p>
+      <p>Powerful lifting system tested 50,000 times.</p>
+      <button class="mybtn" onclick="addToCart()">Add to Cart</button>
+  </div>
+  <div class="pcard">
+      <img src="img/BENTIDCN.jpg" alt="" class="cardimg">
+      <h1 class="pcardtext">BANTI Triple Motor 63'' L-Shaped Desk with LED Light Strip and Power Outlet</h1>
+      <p class="price1">$999.99</p>
+      <p class="price">$799.99</p>
+      <p>Sturdy & stable solid steel frame.</p>
+      <p>Aerospace-grade lifting column connectors.</p>
+      <p>Powerful lifting system tested 50,000 times.</p>
+      <button class="mybtn" onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<h1 class="prtxt">Our products</h1>
+<div class="productbody">
+  
+  <div class="prd">
+    <div class="prdc">
+      <h1 class="prtxt">Rising desks</h1>
+      
+
+    </div>
+    <div ><a href="erdmain.html"><img src="img/rd2.jpg" alt=" " class="prdimg"></a></div>
+    
+  </div>
+  <div class="prd">
+    <div class="prdc">
+      <h1 class="prtxt">Monitor</h1>
+      
+
+    </div>
+    <div ><a href="ms.html"><img src="img/m1.jpg" alt="" class="prdimg"></a></div>
+   
+  </div>
+  <div class="prd">
+    <div class="prdc">
+      <h1 class="prtxt">Ergonomic Chairs</h1>
+      
+
+    </div>
+    <div ><a href="ec.html"><img src="img/ec1.jpg" alt="" class="prdimg"></a></div>
+   
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="sloc">
+    <h1 class="sloc2">Store Information</h1>
+    <p>Our store is located in the very center of city at PG9F+55G, Science Building, Casey Station, Antarctica.</p>
+    <p>And our e-commerce website is always open and has 24/7 service for customers.</p>
+    <p>Our store opening hours are 10am to 5.30pm, Monday to Saturday.</p>
+    <p>Our phone number is +1-528-751-951</p>
+    <p>Our fax number is +85-485-963-212</p>
+    <p>For more detailed information or anything at all, don't hesitate, any time please <a href="Contactform.html" class="c"><h3>Contact us</h3></a></p>
+  </div>
+  <div class="subscribe">
+    <h1>Promotion and News</h1>
+    <p>If you want to keep in touch about our promotion events, discount prices, and news, we always send emails to you.</p>
+    <input type="email" name="Your email address" placeholder="email" id="myInput"><br>
+    <a href="https://mail.google.com/mail/u/0/" class="button">Submit</a>
+  </div>
+  <br><br>
+  <h2>@SDC2024</h2>
+  <div class="bf">
+    
+    <a href="https://www.facebook.com/" class="socialmedialink"><i class="fab fa-facebook"></i> Facebook</a><br>
+    <a href="https://mail.google.com/mail/u/0/" class="socialmedialink"><i class="fab fa-google"></i> Google</a><br>
+    <a href="https://twitter.com/?lang=en" class="socialmedialink"><i class="fab fa-twitter"></i> Twitter (X)</a>
+  </div>
+</div>
+
+           
+
+
+
+
+  <script src="test.js"></script>
+</body>
+
+
+</html>

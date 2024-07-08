@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standing Desk Company</title>
+    <link rel="icon" type="image/x-icon" href="img/SDClogo.jpg">
+    <link rel="stylesheet" href="co.css">
+  
+    <script src="https://kit.fontawesome.com/e8b1f7cb33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="navigation">
+    <div class="logo">
+        <a href="web-heading.html"> <img src="img/SDClogo.jpg" alt="" class="logoimg"></a>
+    </div>
+    <div class="nav">
+        <div class="navbar">
+            <ul>
+                <li><a href="web-heading.html">Home</a></li> 
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Rising Desks</a>
+                    <div class="dropdown-content">
+                        <a href="erdmain.html">Electric Rising Desks</a>
+                        <a href="ms.html">Monitor</a>
+                        <a href="ec.html">Ergonomic Chairs</a>
+                    </div>
+                </li>
+                <li><a href="Contactform.html">Contact us</a></li>
+                <li><a href="hbmain.html">Health Benefits</a></li>
+            </ul>
+        </div> 
+        <div class="navr">
+            <ul>
+                <li><a href="aboutus.html">About us</a></li> 
+                <li class="shoppingcart">
+                    <a href="Checkout.html"><i class="fa-solid fa-basket-shopping"></i><span id="cart-count"></span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="log12"><i id="log11" class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    <div class="dropdown-content">
+                        <a href="">Sign in</a>
+                        <a href="">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br> <br>
+
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form action="submit_form.php" method="post">
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Billing Address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your Name">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="SDC2024@example.com">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="country"><i class="fa fa-globe" aria-hidden="true"></i>Country</label>
+                                <select id="country" name="country" onchange="populateStates()">
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="MM">မြန်မာ(Myanmar)</option>
+                                </select>
+                            </div>
+                            <div class="col-50">
+                                <label for="state">State/Region</label>
+                                <select id="state" name="state" onchange="populateCities()"></select>
+                            </div>
+                            <div class="col-50">
+                                <label for="city">City</label>
+                                <select id="city" name="city"></select>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="10001">
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i id="paymentcard1" class="fa fa-cc-visa"></i>
+                            <i id="paymentcard2" class="fa fa-cc-amex"></i>
+                            <i id="paymentcard3" class="fa fa-cc-mastercard"></i>
+                            <i id="paymentcard4" class="fa fa-cc-discover"></i>
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Name on card">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="MM">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="YY">
+                            </div>
+                            <div class="col-50">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label>
+                <label>
+                    <input type="checkbox" checked="checked" name="sameadr">Yes, I want to receive products discount news and events news
+                </label>
+            </form>
+        </div>
+    </div>
+</div>
+
+<button id="myBtn">Complete Payment process</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Payment Sucessfull</h2>
+        </div>
+        <div class="modal-body">
+            <p>Thanks for purchasing</p>
+            <p>We wish you good days forever.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="bton" onclick="window.location.href='erdmain.html'">Keep purchasing</button>
+        </div>
+    </div>
+</div>
+<script>
+         
+  var modal = document.getElementById("myModal");
+  
+
+  var btn = document.getElementById("myBtn");
+  
+  var span = document.getElementsByClassName("close")[0];
+  
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<div class="footer">
+    <div class="sloc">
+      <h1 class="sloc2">Store Information</h1>
+      <p>Our store is located in the very center of city at PG9F+55G, Science Building, Casey Station, Antarctica.</p>
+      <p>And our e-commerce website is always open and has 24/7 service for customers.</p>
+      <p>Our store opening hours are 10am to 5.30pm, Monday to Saturday.</p>
+      <p>Our phone number is +1-528-751-951</p>
+      <p>Our fax number is +85-485-963-212</p>
+      <p>For more detailed information or anything at all, don't hesitate, any time please <a href="Contactform.html" class="c"><h3>Contact us</h3></a></p>
+    </div>
+    <div class="subscribe">
+      <h1>Promotion and News</h1>
+      <p>If you want to keep in touch about our promotion events, discount prices, and news, we always send emails to you.</p>
+      <input type="email" name="Your email address" placeholder="email" id="myInput"><br>
+      <a href="https://mail.google.com/mail/u/0/" class="button4">Submit</a>
+    </div>
+    <br><br>
+    <div class="bf">
+      <h2>@SDC2024</h2>
+      <a href="https://www.facebook.com/" class="socialmedialink"><i class="fab fa-facebook"></i> Facebook</a><br>
+      <a href="https://mail.google.com/mail/u/0/" class="socialmedialink"><i class="fab fa-google"></i> Google</a><br>
+      <a href="https://twitter.com/?lang=en" class="socialmedialink"><i class="fab fa-twitter"></i> Twitter (X)</a>
+    </div>
+  </div>
+
+<script src="co.js"></script>
+
+</body>
+</html>
